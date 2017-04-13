@@ -48,9 +48,12 @@ removeclass("d6","fade-in-from-bottom");
 
 }
 
+if(!isAndroid&&location.href.indexOf("f=")>0){
+ location.href="https://play.google.com/store/apps/details?id=com.clipbirdapp.app";
+}
  function visitPage(){
 
-	 if(cmpVersions(osVersion,"5.0.0")<=0) 
+	 if(isAndroid&&cmpVersions(osVersion,"5.0.0")<=0) 
 	 {
 						location.href="https://play.google.com/store/apps/details?id=com.clipbirdapp.app&amp;pcampaignid=fdl_long&amp;url=http://d.fipe.io/?f%3Dmsgtxt%26utm_source%3Dmsgtxt%26utm_medium%3Dmsg%26utm_campaign%3Dmsg"
 						;
