@@ -12,9 +12,11 @@
 var ua=navigator.userAgent;
 
 var isAndroid = ua.toLowerCase().indexOf("android") > -1;
-
+var inapp =  ua.indexOf("KAKAOTALK")>=0||ua.indexOf("IAB")>=0;
+	
 //"intent:"+"https://j996f.app.goo.gl/I2Jc" +"#Intent;package=com.android.chrome;end;";
-	location.href="intent:"+"https://j996f.app.goo.gl/?link=http://d.fipe.io/?f%3Dad_fb&apn=com.clipbirdapp.app"+"#Intent;package=com.android.chrome;end;";
+	location.href=(isAndroid&& inapp)? ("intent:"+"https://j996f.app.goo.gl/?link=http://d.fipe.io/?f%3Dad_fb&apn=com.clipbirdapp.app"+"#Intent;package=com.android.chrome;end;")
+	:"https://j996f.app.goo.gl/?link=http://d.fipe.io/?f%3Dad_fb&apn=com.clipbirdapp.app";
 //-->
 </script>
 </html>
